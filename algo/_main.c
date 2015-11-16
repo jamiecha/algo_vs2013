@@ -20,7 +20,6 @@ int main(void){
 	//test_malloc();
 
 	backtrack_subsetsum();
-	//test line
 
 	return 0;
 }
