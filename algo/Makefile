@@ -2,7 +2,7 @@ TARGET   = algo.exe
 
 CC       = gcc -std=c99 -c
 # compiling flags here
-CFLAGS   = -Wall -I.
+CFLAGS   = -Wall -Wno-unused-function -I.
 
 LINKER   = gcc -o
 # linking flags here
