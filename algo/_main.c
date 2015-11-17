@@ -17,9 +17,9 @@ int main(void){
 	//knapsack_dp();
 	//fibo();
 	//lis();
-	//test_malloc();
+	test_malloc();
 
-	backtrack_subsetsum();
+	//backtrack_subsetsum();
 
 	return 0;
 }
