@@ -40,7 +40,7 @@ static int fibo_tabulation(int n){
 	return cache[n];
 }
 
-void fibo(void){
+void dp_fibo(void){
 	int r;
 
 	for (r = 0; r < MAXN; r++)

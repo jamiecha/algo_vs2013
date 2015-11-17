@@ -17,7 +17,7 @@ static void _test_malloc(void){
 	return;
 }
 
-void test_malloc(void){
+void util_malloc(void){
 
 	int i;
 	clock_t start, end;

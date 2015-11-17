@@ -11,7 +11,7 @@
 static int br;
 
 
-void lis(void){
+void dp_lis(void){
 
 	br = 1;
 }

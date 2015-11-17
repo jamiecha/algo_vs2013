@@ -63,6 +63,9 @@
     <ClCompile Include="util.random.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="backtrack.nqueen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile">
