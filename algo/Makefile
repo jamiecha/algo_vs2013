@@ -25,5 +25,6 @@ obj: $(SOURCES) $(INCLUDES)
 
 clean:
 	@$(rm) $(TARGET) $(OBJECTS)
+	@$(rm) r.txt
 	@echo "Cleanup complete!"
 
