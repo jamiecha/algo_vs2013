@@ -92,6 +92,7 @@
     <ClCompile Include="sort.quick.c" />
     <ClCompile Include="util.malloc.c" />
     <ClCompile Include="util.random.c" />
+    <ClCompile Include="util.time.c" />
     <ClCompile Include="_main.c" />
   </ItemGroup>
   <ItemGroup>
