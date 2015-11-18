@@ -10,9 +10,10 @@ extern void knapsack_dp(void);
 extern void dp_fibo(void);
 extern void dp_lis(void);
 
+extern void graph_dijkstra(void);
+
 extern void sort_bubble(void);
 
-extern void util_malloc(void);
 
 
 
@@ -20,14 +21,14 @@ int main(void){
 
 	//sort_bubble();
 	//backtrack_basic();
+	//backtrack_subsetsum();
+	//backtrack_nqueen();
+
 	//knapsack_naive();
 	//knapsack_dp();
 	//dp_fibo();
 	//dp_lis();
-	//backtrack_subsetsum();
+	graph_dijkstra();
 
-	backtrack_nqueen();
-
-	//util_malloc();
 	return 0;
 }
