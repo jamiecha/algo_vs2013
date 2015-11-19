@@ -1,28 +1,27 @@
 /*
-	http://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm
-	http://blog.naver.com/jojoldu/90184758192
-	https://compprog.wordpress.com/2007/12/01/one-source-shortest-path-dijkstras-algorithm
-	*/
+http://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm
+http://blog.naver.com/jojoldu/90184758192
+https://compprog.wordpress.com/2007/12/01/one-source-shortest-path-dijkstras-algorithm
+*/
 
 #include <stdio.h>
 static int br;
 
 /*
-		8        7
-		(1)-----(2)-----(3)
-		4/  |      |\      | \
-		/   |     2| \     |  \9
-		(0)   |11   (8) \    |   \
-		\   |    / |   \4  |14 (4)
-		8\  |  7/  |6   \  |  /
-		\ |  /   |     \ | /10
-		(7)----(6)----(5)
-		1      2
-		*/
+            8        7
+       (1)-----(2)-----(3)
+     4/  |      |\      | \
+     /   |     2| \     |  \9
+   (0)   |11   (8) \    |   \
+     \   |    / |   \4  |14 (4)
+     8\  |  7/  |6   \  |  /
+       \ |  /   |     \ | /10
+        (7)----(6)----(5)
+             1      2
+*/
 
 #define INFINITY 2^31
 #define MAX(a, b) ((a > b) ? (a) : (b))
-
 
 #define V 9
 #define GRAPHSIZE V
@@ -70,7 +69,7 @@ static void print_path(int dest) {
 }
 
 static void dijkstra(int start) {
-	int i, k, mini;
+	int i, k, min_index, min_dist;
 
 	for (i = 0; i < n; i++) {
 		dist[i] = INFINITY;
@@ -81,19 +80,27 @@ static void dijkstra(int start) {
 	dist[start] = 0;
 
 	for (k = 0; k < n; k++) {
-		mini = -1;
-		for (i = 0; i < n; i++)
-			if (!visited[i] && ((mini == -1) || (dist[i] < dist[mini])))
-				mini = i;
 
-		visited[mini] = 1;
+		min_dist = INFINITY;
 
-		for (i = 0; i < n; i++)
-			if (map[mini][i])
-				if (dist[mini] + map[mini][i] < dist[i]) {
-					dist[i] = dist[mini] + map[mini][i];
-					prev[i] = mini;
+		for (i = 0; i < n; i++){
+			if (!visited[i]){
+				if ((dist[i] <= min_dist)){
+					min_index = i;
+					min_dist = dist[min_index];
 				}
+			}
+		}
+
+		visited[min_index] = 1;
+
+		for (i = 0; i < n; i++){
+			if (map[min_index][i])
+				if (dist[min_index] + map[min_index][i] < dist[i]) {
+					dist[i] = dist[min_index] + map[min_index][i];
+					prev[i] = min_index;
+				}
+		}
 	}
 }
 
