@@ -9,6 +9,7 @@ extern void knapsack_dp(void);
 
 extern void dp_fibo(void);
 extern void dp_lis(void);
+extern void dp_edit_distance(void);
 
 extern void graph_dijkstra(void);
 
@@ -29,7 +30,8 @@ int main(void){
 	//dp_fibo();
 	//dp_lis();
 
-	graph_dijkstra();
+	//graph_dijkstra();
+	dp_edit_distance();
 
 	return 0;
 }

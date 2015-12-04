@@ -80,7 +80,9 @@
     <ClCompile Include="backtrack.knightstour.c" />
     <ClCompile Include="backtrack.nqueen.c" />
     <ClCompile Include="backtrack.subsetsum.c" />
+    <ClCompile Include="dp.editdistance.c" />
     <ClCompile Include="dp.fibo.c" />
+    <ClCompile Include="dp.lcs.c" />
     <ClCompile Include="dp.lis.c" />
     <ClCompile Include="graph.bfs.dfs.c" />
     <ClCompile Include="graph.dijkstra.c" />
