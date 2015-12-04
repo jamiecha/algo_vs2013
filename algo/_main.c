@@ -10,6 +10,7 @@ extern void knapsack_dp(void);
 extern void dp_fibo(void);
 extern void dp_lis(void);
 extern void dp_edit_distance(void);
+extern void dp_mincostpath(void);
 
 extern void graph_dijkstra(void);
 

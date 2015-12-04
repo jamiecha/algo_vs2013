@@ -75,6 +75,12 @@
     <ClCompile Include="dp.editdistance.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dp.mincostpath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dp.coinchange.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile">
