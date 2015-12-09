@@ -88,7 +88,8 @@
     <ClCompile Include="dp.mincostpath.c" />
     <ClCompile Include="graph.bfs.dfs.c" />
     <ClCompile Include="graph.dijkstra.c" />
-    <ClCompile Include="graph.prim.c" />
+    <ClCompile Include="graph.mst.kruskal.c" />
+    <ClCompile Include="graph.mst.prim.c" />
     <ClCompile Include="graph.tsp.c" />
     <ClCompile Include="knapsack.dp.c" />
     <ClCompile Include="knapsack.naive.c" />

@@ -2,6 +2,8 @@
 http://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm
 http://blog.naver.com/jojoldu/90184758192
 https://compprog.wordpress.com/2007/12/01/one-source-shortest-path-dijkstras-algorithm
+
+목적 : 그래프상의 임의의 두 점간 최단거리
 */
 
 #include <stdio.h>

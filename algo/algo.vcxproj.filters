@@ -39,9 +39,6 @@
     <ClCompile Include="graph.dijkstra.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="graph.prim.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="graph.tsp.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -79,6 +76,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dp.coinchange.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.mst.kruskal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.mst.prim.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

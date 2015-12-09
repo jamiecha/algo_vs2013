@@ -30,9 +30,10 @@ int main(void){
 	//knapsack_dp();
 	//dp_fibo();
 	//dp_lis();
+	dp_coinchange();
 
 	//graph_dijkstra();
-	dp_edit_distance();
+	//dp_edit_distance();
 
 	return 0;
 }
