@@ -13,6 +13,7 @@ extern void dp_edit_distance(void);
 extern void dp_mincostpath(void);
 
 extern void graph_dijkstra(void);
+extern void graph_mst_kruskal(void);
 
 extern void sort_bubble(void);
 
@@ -30,10 +31,12 @@ int main(void){
 	//knapsack_dp();
 	//dp_fibo();
 	//dp_lis();
-	dp_coinchange();
+	//dp_edit_distance();
+	//dp_coinchange();
 
 	//graph_dijkstra();
-	//dp_edit_distance();
+
+	graph_mst_kruskal();
 
 	return 0;
 }
