@@ -11,6 +11,7 @@ extern void dp_fibo(void);
 extern void dp_lis(void);
 extern void dp_edit_distance(void);
 extern void dp_mincostpath(void);
+extern void dp_matrics_road(void);
 
 extern void graph_dijkstra(void);
 extern void graph_mst_kruskal(void);
@@ -36,7 +37,8 @@ int main(void){
 
 	//graph_dijkstra();
 
-	graph_mst_kruskal();
+	//graph_mst_kruskal();
+	dp_matrics_road();
 
 	return 0;
 }
