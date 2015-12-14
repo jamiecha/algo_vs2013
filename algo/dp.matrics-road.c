@@ -7,8 +7,9 @@ static int br;
 
 #define X 6
 #define Y 5
-static int cache[Y][X];
 
+// DP
+static int cache[Y][X];
 void dp_matrics_road(void){
 
 	int x, y;
@@ -29,3 +30,59 @@ void dp_matrics_road(void){
 	br = 1;
 	return;
 }
+
+static int ways;
+static int callcount;
+
+static int memo[Y][X];
+static void recur_memo(int x, int y){
+	callcount++;
+	if (x > X - 1 || y > Y - 1)
+		return;
+	if (x == X - 1 && y == Y - 1){
+		//found solution
+		ways++;
+		return;
+	}
+	memo[y][x] = 1;
+	if (memo[y][x+1]==0)
+		recur_memo(x+1, y);
+	if (memo[y+1][x]==0)
+		recur_memo(x, y+1);
+	return;
+}
+
+static void recur(int x, int y){
+	callcount++;
+	if (x > X - 1 || y>Y - 1)
+		return;
+	if (x == X - 1 && y == Y - 1){
+		//found solution
+		ways++;
+		return;
+	}
+	recur(x + 1, y);
+	recur(x, y + 1);
+	return;
+}
+
+void bfs_matrics_road(void){
+
+	int x, y;
+	for (y = 0; y < Y; y++)
+		for (x = 0; x < X; x++)
+			memo[y][x] = 0;
+	ways = 0; 
+	callcount = 0;
+	//recur(0, 0);
+	recur_memo(0, 0);
+	printf("ways=%d, callcnt=%d\n",ways,callcount);
+	br = 1;
+	return;
+}
+
+
+
+
+
+
