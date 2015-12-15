@@ -1,4 +1,4 @@
-/* find cases of shortest paths in 5x6 matrics (1,1) to (5,4) 
+/* find cases of shortest paths in 5x6 matrics (1,1) to (5,4)
 http://articles.leetcode.com/2010/11/unique-paths.html
 */
 
@@ -24,17 +24,17 @@ static int dp_unique_paths_impl(void){
 	for (y = 0; y < Y; y++)
 		cache[y][0] = 1;
 
-	for (y = 1; y < Y;y++){
-		for (x = 1; x < X;x++){
-			cache[y][x] = cache[y][x-1] + cache[y-1][x];
+	for (y = 1; y < Y; y++){
+		for (x = 1; x < X; x++){
+			cache[y][x] = cache[y][x - 1] + cache[y - 1][x];
 		}
 	}
 
-	return cache[Y-1][X-1];
+	return cache[Y - 1][X - 1];
 }
 
 // memoization
-static int memo[Y+1][X+1];
+static int memo[Y + 1][X + 1];
 static int recur_memo(int x, int y){
 	callcount++;
 
@@ -45,13 +45,13 @@ static int recur_memo(int x, int y){
 	if (x == X && y == Y)
 		return 1;
 
-	if (memo[y+1][x] == -1)
-		memo[y+1][x] = recur_memo(x,y+1);
+	if (memo[y + 1][x] == -1)
+		memo[y + 1][x] = recur_memo(x, y + 1);
 
-	if (memo[y][x+1] == -1)
-		memo[y][x+1] = recur_memo(x+1, y);
+	if (memo[y][x + 1] == -1)
+		memo[y][x + 1] = recur_memo(x + 1, y);
 
-	memo[y][x] = memo[y][x+1] + memo[y+1][x];
+	memo[y][x] = memo[y][x + 1] + memo[y + 1][x];
 	return memo[y][x];
 }
 

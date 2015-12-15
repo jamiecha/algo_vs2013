@@ -7,12 +7,12 @@
 #define N 4
 #define THR 9
 static int array[N] = { 1, 2, 4, 8 };
-static int answer[N] = { 0};
+static int answer[N] = { 0 };
 static int callcount = 0;
 
 static void process_solution(int ans[], int k){
 	int i;
-	for (i = 0; i<k; i++){
+	for (i = 0; i < k; i++){
 		if (ans[i])
 			printf("%3d ", array[i]);
 	}
@@ -31,9 +31,9 @@ static int sum(int k){
 
 static void backtrack(int ans[], int k){
 
-//	int i;
+	//	int i;
 	callcount++;
-	if (sum(k)>=THR){ // is_a_solution()
+	if (sum(k) >= THR){ // is_a_solution()
 		process_solution(ans, k);
 	}
 	else if (k == N){

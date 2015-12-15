@@ -13,6 +13,7 @@ extern void dp_edit_distance(void);
 extern void dp_mincostpath(void);
 extern void dp_unique_paths(void);
 extern void bfs_matrics_road(void);
+extern void dp_lcs(void);
 
 extern void graph_dijkstra(void);
 extern void graph_mst_kruskal(void);
@@ -39,7 +40,8 @@ int main(void){
 	//graph_dijkstra();
 
 	//graph_mst_kruskal();
-	dp_unique_paths();
+	//dp_unique_paths();
+	dp_lcs();
 
 	return 0;
 }

@@ -7,9 +7,9 @@ static int br;
 #define X 3
 #define Y 3
 static int map[Y][X] = {
-	{1, 2, 3},
-	{4, 8, 2},
-	{1, 5, 3}
+	{ 1, 2, 3 },
+	{ 4, 8, 2 },
+	{ 1, 5, 3 }
 };
 
 

@@ -22,10 +22,10 @@ void util_malloc(void){
 	int i;
 	clock_t start, end;
 	float seconds;
-	
+
 	start = clock();
 
-	for (i = 0; i < 1000*1000; i++){
+	for (i = 0; i < 1000 * 1000; i++){
 		_test_malloc();
 	}
 

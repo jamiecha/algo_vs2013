@@ -9,5 +9,5 @@ double now(void){
 
 
 double took(double a, double b){
-	return (double)((b-a)/CLOCKS_PER_SEC);
+	return (double)((b - a) / CLOCKS_PER_SEC);
 }

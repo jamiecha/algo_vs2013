@@ -13,7 +13,7 @@ static int fibo_dp(int n){
 		return n;
 
 	if (cache[n] == -1){
-		cache[n] = fibo_dp(n-1) + fibo_dp(n-2);
+		cache[n] = fibo_dp(n - 1) + fibo_dp(n - 2);
 	}
 
 	return cache[n];
@@ -35,7 +35,7 @@ static int fibo_tabulation(int n){
 	cache[0] = 0;
 	cache[1] = 1;
 	for (i = 2; i <= n; i++){
-		cache[i] = cache[i-1] + cache[i-2];
+		cache[i] = cache[i - 1] + cache[i - 2];
 	}
 	return cache[n];
 }
@@ -45,12 +45,12 @@ void dp_fibo(void){
 
 	for (r = 0; r < MAXN; r++)
 		cache[r] = -1;
-	
+
 	//r = fibo_dp(40);
 	//r = fibo_naive(30);
 	r = fibo_tabulation(40);
 
-	printf("fibo=%d\n",r);
+	printf("fibo=%d\n", r);
 	br = 1;
 	return;
 }

@@ -10,18 +10,18 @@ int ans = 0;
 
 
 int diff(int a, int b){
-	if(a>b)
-		return a-b;
+	if (a > b)
+		return a - b;
 	else
-		return b-a;
+		return b - a;
 }
 
 
 void print_board(int n){
-	int x,y;
-	for(y=0;y<n;y++){
-		for(x=0;x<n;x++){
-			printf("%d ",board[y][x]);
+	int x, y;
+	for (y = 0; y < n; y++){
+		for (x = 0; x < n; x++){
+			printf("%d ", board[y][x]);
 		}
 		printf("\n");
 	}
@@ -29,33 +29,33 @@ void print_board(int n){
 
 
 void init_board(int n){
-	int x,y;
-	for(y=0;y<n;y++)
-		for(x=0;x<n;x++)
-			board[y][x]=0;	
+	int x, y;
+	for (y = 0; y < n; y++)
+		for (x = 0; x < n; x++)
+			board[y][x] = 0;
 }
 
 
 int is_safe1(int row, int col, int n){
-	int x,y;
+	int x, y;
 
 	// the first row
-	if(row==0){
+	if (row == 0){
 		return 1;
 	}
 
 	// column collision
-	for(y=0;y<row;y++){
-		if(board[y][col]){
+	for (y = 0; y < row; y++){
+		if (board[y][col]){
 			return 0;
 		}
 	}
 
 	// diagonal collision
-	for(y=0;y<row;y++){
-		for(x=0;x<n;x++){
-			if(board[y][x])
-				if(diff(row,y)==diff(col,x)){
+	for (y = 0; y < row; y++){
+		for (x = 0; x < n; x++){
+			if (board[y][x])
+				if (diff(row, y) == diff(col, x)){
 					return 0;
 				}
 		}
@@ -68,36 +68,36 @@ int is_safe1(int row, int col, int n){
 
 
 int is_safe2(int row, int col, int n){
-	int x,y;
+	int x, y;
 
 	// the first row
-	if(row==0){
+	if (row == 0){
 		return 1;
 	}
 
 	// column collision
-	for(y=0;y<row;y++){
-		if(board[y][col]){
+	for (y = 0; y < row; y++){
+		if (board[y][col]){
 			return 0;
 		}
 	}
 
 	// diagonal left-back collision
-	x=col-1; 
-	y=row-1;
-	while( x>=0 && y>=0 ){
-		if(board[y][x])
+	x = col - 1;
+	y = row - 1;
+	while (x >= 0 && y >= 0){
+		if (board[y][x])
 			return 0;
-		x--;y--;
+		x--; y--;
 	}
 
 	// diagonal right-back collision
-	x=col+1;
-	y=row-1;
-	while( x<n && y>=0 ){
-		if(board[y][x])
+	x = col + 1;
+	y = row - 1;
+	while (x < n && y >= 0){
+		if (board[y][x])
 			return 0;
-		x++;y--;
+		x++; y--;
 	}
 
 	// everything is okay
@@ -111,17 +111,17 @@ void nqueen(int row, int n){
 
 	int col;
 
-	if(row == n){
+	if (row == n){
 		//printf("nqueen:%d\n",row);
 		//print_board(n);
 		ans++;
 		return;
 	}
 
-	for(col=0;col<n;col++){
-		if(is_safe2(row,col,n)){      // compare safe1 & safe2
+	for (col = 0; col < n; col++){
+		if (is_safe2(row, col, n)){      // compare safe1 & safe2
 			board[row][col] = 1;
-			nqueen(row+1,n);
+			nqueen(row + 1, n);
 			board[row][col] = 0;
 		}
 	}
@@ -133,14 +133,14 @@ void nqueen(int row, int n){
 
 void backtrack_nqueen(void){
 	int n;
-	double s,e;
-	for(n=4;n<=NMAX;n++){
+	double s, e;
+	for (n = 4; n <= NMAX; n++){
 		s = now();
 		init_board(n);
 		ans = 0;
-		nqueen(0,n);
+		nqueen(0, n);
 		e = now();
-		printf("%d %d took=%f\n",n,ans,took(s,e));
+		printf("%d %d took=%f\n", n, ans, took(s, e));
 	}
 
 	br = 1;

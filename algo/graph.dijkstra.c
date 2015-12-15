@@ -29,16 +29,16 @@ static int br;
 #define GRAPHSIZE V
 /* map[i][j] is the distance between node i and j; or 0 if there is no direct connection */
 int map[V][V] = {
-//  0  1  2  3  4  5  6  7  8
-  { 0, 4, 0, 0, 0, 0, 0, 8, 0 }, // 0
-  { 4, 0, 8, 0, 0, 0, 0,11, 0 }, // 1
-  { 0, 8, 0, 7, 0, 4, 0, 0, 2 }, // 2
-  { 0, 0, 7, 0, 9,14, 0, 0, 0 }, // 3
-  { 0, 0, 0, 9, 0,10, 0, 0, 0 }, // 4
-  { 0, 0, 4,14,10, 0, 2, 0, 0 }, // 5
-  { 0, 0, 0, 0, 0, 2, 0, 1, 6 }, // 6
-  { 8, 11,0, 0, 0, 0, 1, 0, 7 }, // 7
-  { 0, 0, 2, 0, 0, 0, 6, 7, 0 }  // 8
+	//  0  1  2  3  4  5  6  7  8
+	{ 0, 4, 0, 0, 0, 0, 0, 8, 0 }, // 0
+	{ 4, 0, 8, 0, 0, 0, 0, 11, 0 }, // 1
+	{ 0, 8, 0, 7, 0, 4, 0, 0, 2 }, // 2
+	{ 0, 0, 7, 0, 9, 14, 0, 0, 0 }, // 3
+	{ 0, 0, 0, 9, 0, 10, 0, 0, 0 }, // 4
+	{ 0, 0, 4, 14, 10, 0, 2, 0, 0 }, // 5
+	{ 0, 0, 0, 0, 0, 2, 0, 1, 6 }, // 6
+	{ 8, 11, 0, 0, 0, 0, 1, 0, 7 }, // 7
+	{ 0, 0, 2, 0, 0, 0, 6, 7, 0 }  // 8
 };
 
 static int n; /* The number of nodes in the graph */
@@ -89,7 +89,7 @@ static void dijkstra(int start) {
 		/* find the nearest vertex among non-visited ones */
 		for (i = 0; i < n; i++){
 			if (!visited[i]){
-				if ( dist[i] <= min_dist ){
+				if (dist[i] <= min_dist){
 					min_index = i;
 					min_dist = dist[min_index];
 				}
@@ -101,7 +101,7 @@ static void dijkstra(int start) {
 		for (i = 0; i < n; i++){
 			if (map[min_index][i]) /* among neighbours of min_index node ... */
 				/* which path is shorter between ( source ~ min_index ~ i ) and ( source ~ i ) ? */
-				if (dist[min_index] + map[min_index][i] < dist[i]) { 
+				if (dist[min_index] + map[min_index][i] < dist[i]) {
 					dist[i] = dist[min_index] + map[min_index][i];
 					prev[i] = min_index;
 				}

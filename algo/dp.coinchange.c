@@ -40,13 +40,13 @@ static int solve_naive(int last_entry, int amount){
 
 
 //====================================================================
-static int dp_table[AMOUNT+1][TYPE_COINS];
+static int dp_table[AMOUNT + 1][TYPE_COINS];
 static int solve_dp(void){
 
 	int a, t;
 	int incl, excl;
 
-	memset(dp_table, 0, sizeof(int)*TYPE_COINS*(AMOUNT+1));
+	memset(dp_table, 0, sizeof(int)*TYPE_COINS*(AMOUNT + 1));
 
 	// amount = 0 always has 1 solution : {}
 	for (t = 0; t < TYPE_COINS; t++){
@@ -58,22 +58,22 @@ static int solve_dp(void){
 
 			// include this coin
 			if (a - coin[t] >= 0)
-				incl = dp_table[a-coin[t]][t];
+				incl = dp_table[a - coin[t]][t];
 			else
 				incl = 0;
 
 			// exclude this coin
 			if (t >= 1)
-				excl = dp_table[a][t-1];
+				excl = dp_table[a][t - 1];
 			else
 				excl = 0;
-			
+
 			dp_table[a][t] = incl + excl;
 			br = 1;
 		}
 	}
 
-	return dp_table[AMOUNT][TYPE_COINS-1];
+	return dp_table[AMOUNT][TYPE_COINS - 1];
 }
 
 
@@ -86,7 +86,7 @@ void dp_coinchange(void){
 	int r;
 	//r = solve_naive(TYPE_COINS-1, AMOUNT);
 	r = solve_dp();
-	printf("possible cases are : %d (%d)\n",r,callcount);
+	printf("possible cases are : %d (%d)\n", r, callcount);
 	br = 1;
 	return;
 }

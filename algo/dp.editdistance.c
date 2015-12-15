@@ -8,8 +8,8 @@ static int br;
 static int solve(char *s1, char *s2, int ls1, int ls2){
 	int i;
 
-	for (i = 0; i < ls1;i++)
-		printf("%c",s1[i]);
+	for (i = 0; i < ls1; i++)
+		printf("%c", s1[i]);
 
 	printf("\n");
 

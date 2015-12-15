@@ -9,13 +9,13 @@ static int br;
 #define INF 0xffff
 #define N 6
 static int G[N][N] = {
-     /* 0  1  2  3  4  5  */
-/*0*/ { 0, 3, 1, 6, 0, 0 },
-/*1*/ { 3, 0, 5, 0, 3, 0 },
-/*2*/ { 1, 5, 0, 5, 6, 4 },
-/*3*/ { 6, 0, 5, 0, 0, 2 },
-/*4*/ { 0, 3, 6, 0, 0, 6 },
-/*5*/ { 0, 0, 4, 2, 6, 0 }
+	/*     0  1  2  3  4  5  */
+	/*0*/{ 0, 3, 1, 6, 0, 0 },
+	/*1*/{ 3, 0, 5, 0, 3, 0 },
+	/*2*/{ 1, 5, 0, 5, 6, 4 },
+	/*3*/{ 6, 0, 5, 0, 0, 2 },
+	/*4*/{ 0, 3, 6, 0, 0, 6 },
+	/*5*/{ 0, 0, 4, 2, 6, 0 }
 };
 
 static int parent_of[N];
@@ -44,11 +44,11 @@ static int solve(void){
 	}
 
 	// everyone is orphan at the beginning
-	for (y = 0; y < N;y++)
+	for (y = 0; y < N; y++)
 		parent_of[y] = -1;
 
 	// connect N-1 edges for N vertices
-	while (n < N-1){
+	while (n < N - 1){
 
 		// find the shortest edge 
 		// --> this could have been done by having sorted edge list beforehand
@@ -68,10 +68,10 @@ static int solve(void){
 		y = root_of(miny);
 
 		// if they are not family yet, connect them.
-		if (x!=y){
+		if (x != y){
 			parent_of[x] = y;
 			total_dist += min_dist;
-			printf("adding %d %d (%d)\n",minx,miny,min_dist);
+			printf("adding %d %d (%d)\n", minx, miny, min_dist);
 			n++;
 		}
 
@@ -85,7 +85,7 @@ void graph_mst_kruskal(void){
 
 	int r;
 	r = solve();
-	printf("mincost=%d\n",r);
+	printf("mincost=%d\n", r);
 	br = 1;
 	return;
 }
