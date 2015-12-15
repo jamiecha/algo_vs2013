@@ -85,7 +85,7 @@
     <ClCompile Include="dp.fibo.c" />
     <ClCompile Include="dp.lcs.c" />
     <ClCompile Include="dp.lis.c" />
-    <ClCompile Include="dp.matrics-road.c" />
+    <ClCompile Include="dp.uniquepaths.c" />
     <ClCompile Include="dp.mincostpath.c" />
     <ClCompile Include="graph.bfs.dfs.c" />
     <ClCompile Include="graph.dijkstra.c" />

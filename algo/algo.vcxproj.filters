@@ -84,7 +84,7 @@
     <ClCompile Include="graph.mst.prim.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dp.matrics-road.c">
+    <ClCompile Include="dp.uniquepaths.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
