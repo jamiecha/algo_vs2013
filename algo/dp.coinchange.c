@@ -2,6 +2,7 @@
 http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/
 */
 #include <stdio.h>
+#include <string.h>
 
 static int br;
 
