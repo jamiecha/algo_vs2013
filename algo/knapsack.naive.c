@@ -7,6 +7,9 @@ static int val[] = { 30, 40, 50, 80, 100 };
 static int wei[] = { 1, 3, 6, 7, 9 };
 static int W = 20;
 static int N = sizeof(val) / sizeof(val[0]);
+static int callcount = 0;
+static int maxvsum = 0;
+
 
 
 static int max(int a, int b){
@@ -16,30 +19,25 @@ static int max(int a, int b){
 		return b;
 }
 
-static int callcount = 0;
 
-// Returns the "maximum value" that can be put in a knapsack of (remaining) capacity W
-static int knapsack(int W, int n){
-
-	int v_include, v_exclude;
-	printf("n=%d, W=%d\n", n, W);
+static int knapsack(int idx, int wsum, int vsum){
 
 	callcount++;
 
-	// base case
-	if (n == 0 || W <= 0)
+	if (wsum > W)
 		return 0;
 
-	// If weight of the nth item is more than (remaining) Knapsack capacity W, then
-	// this item cannot be included in the optimal solution
-	if (wei[n - 1] > W)
-		return knapsack(W, n - 1);
-	// Return the maximum of two cases: (1) nth item included (2) not included
-	else{
-		v_include = val[n - 1] + knapsack(W - wei[n - 1], n - 1);
-		v_exclude = knapsack(W, n - 1);
-		return max(v_include, v_exclude);
+	if (vsum > maxvsum){
+		maxvsum = vsum;
+		printf("new=%d\n", maxvsum);
 	}
+
+	if (idx == N)
+		return 0;
+
+	return max(maxvsum, max(knapsack(idx + 1, wsum, vsum),
+		knapsack(idx + 1, wsum + wei[idx], vsum + val[idx]))
+		);
 
 }
 
@@ -47,10 +45,10 @@ static int knapsack(int W, int n){
 void knapsack_naive(void){
 
 	int r;
-	r = knapsack(W, N);
+	r = knapsack(0, 0, 0);
 	printf("val=%d,(call=%d)\n", r, callcount);
 
-	br = br;
+	br = 1;
 	return;
 }
 

@@ -49,6 +49,6 @@ void knapsack_dp(void){
 	}
 
 	printf("max value = %d", matrix[N][W]);
-	br = br;
+	br = 1;
 	return;
 }

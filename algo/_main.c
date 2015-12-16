@@ -32,7 +32,7 @@ int main(void){
 	//backtrack_nqueen();
 
 	//knapsack_naive();
-	//knapsack_dp();
+	knapsack_dp();
 	//dp_fibo();
 	//dp_lis();
 	//dp_edit_distance();
@@ -43,7 +43,7 @@ int main(void){
 	//graph_mst_kruskal();
 	//dp_unique_paths();
 	//dp_lcs();
-	backtrack_permu();
+	//backtrack_permu();
 
 	return 0;
 }
