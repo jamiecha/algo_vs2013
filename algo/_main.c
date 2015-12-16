@@ -3,6 +3,7 @@
 extern void backtrack_basic(void);
 extern void backtrack_subsetsum(void);
 extern void backtrack_nqueen(void);
+extern void backtrack_permu(void);
 
 extern void knapsack_naive(void);
 extern void knapsack_dp(void);
@@ -41,7 +42,8 @@ int main(void){
 
 	//graph_mst_kruskal();
 	//dp_unique_paths();
-	dp_lcs();
+	//dp_lcs();
+	backtrack_permu();
 
 	return 0;
 }

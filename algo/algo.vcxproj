@@ -79,6 +79,7 @@
     <ClCompile Include="backtrack.combi.c" />
     <ClCompile Include="backtrack.knightstour.c" />
     <ClCompile Include="backtrack.nqueen.c" />
+    <ClCompile Include="backtrack.permu.c" />
     <ClCompile Include="backtrack.subsetsum.c" />
     <ClCompile Include="dp.coinchange.c" />
     <ClCompile Include="dp.editdistance.c" />
