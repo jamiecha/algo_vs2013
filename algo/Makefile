@@ -1,4 +1,10 @@
-TARGET   = algo.exe
+ifeq ($(OS),Windows_NT)
+	# cygwin, visual studio
+	TARGET = algo.exe
+else
+	# Linux
+	TARGET = algo.out
+endif
 
 CC       = gcc -std=c99 -c
 # compiling flags here
