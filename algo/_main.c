@@ -28,11 +28,11 @@ int main(void){
 
 	//sort_bubble();
 	//backtrack_basic();
-	//backtrack_subsetsum();
+	backtrack_subsetsum();
 	//backtrack_nqueen();
 
 	//knapsack_naive();
-	knapsack_dp();
+	//knapsack_dp();
 	//dp_fibo();
 	//dp_lis();
 	//dp_edit_distance();
