@@ -82,6 +82,7 @@
     <ClCompile Include="backtrack.permu.c" />
     <ClCompile Include="backtrack.subsetsum.c" />
     <ClCompile Include="dp.coinchange.c" />
+    <ClCompile Include="dp.cuttingarod.c" />
     <ClCompile Include="dp.editdistance.c" />
     <ClCompile Include="dp.fibo.c" />
     <ClCompile Include="dp.lcs.c" />

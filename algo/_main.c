@@ -15,6 +15,7 @@ extern void dp_mincostpath(void);
 extern void dp_unique_paths(void);
 extern void bfs_matrics_road(void);
 extern void dp_lcs(void);
+extern void dp_cutting_a_rod(void);
 
 extern void graph_dijkstra(void);
 extern void graph_mst_kruskal(void);
@@ -28,7 +29,7 @@ int main(void){
 
 	//sort_bubble();
 	//backtrack_basic();
-	backtrack_subsetsum();
+	//backtrack_subsetsum();
 	//backtrack_nqueen();
 
 	//knapsack_naive();
@@ -37,6 +38,7 @@ int main(void){
 	//dp_lis();
 	//dp_edit_distance();
 	//dp_coinchange();
+	dp_cutting_a_rod();
 
 	//graph_dijkstra();
 
