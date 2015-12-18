@@ -39,7 +39,7 @@ static void print_stack(void){
 }
 
 static int callcount = 0;
-void solve_naive(int idx, int amount){
+static void solve_naive(int idx, int amount){
 
 	callcount++;
 	if (amount == 0){
