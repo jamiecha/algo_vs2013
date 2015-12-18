@@ -5,38 +5,66 @@ http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/
 #include <string.h>
 
 static int br;
+static int count;
 
-// case 1: 
-//#define TYPE_COINS 3
-//#define AMOUNT 4 
-//static int coin[TYPE_COINS] = {1,2,3};
+#define case 3
 
-// case 2:
+#if case==1
+#define TYPE_COINS 3
+#define AMOUNT 4 
+static int coin[TYPE_COINS] = {1,2,3};
+#elif case==2
 #define TYPE_COINS 4
 #define AMOUNT 10
 static int coin[TYPE_COINS] = { 2, 3, 5, 6 };
-
+#elif case==3
+#define TYPE_COINS 6
+#define AMOUNT 100
+static int coin[TYPE_COINS] = { 1, 2, 5, 10, 20, 50 };
+#else
+#error "no matching case"
+#endif
 
 //====================================================================
+
+static int stack[AMOUNT];
+static int sp;
+
+static void print_stack(void){
+	int i;
+	for (i = 0; i < sp; i++){
+		printf("%d-", stack[i]);
+	}
+	printf("\n");
+}
+
 static int callcount = 0;
-static int solve_naive(int last_entry, int amount){
+void solve_naive(int idx, int amount){
 
 	callcount++;
 	if (amount == 0){
-		printf("found!\n");
-		return 1;
+		count++;
+		print_stack();
+		return;
 	}
 
 	if (amount < 0){
-		return 0;
+		return;
 	}
 
-	if (last_entry < 0){
-		return 0;
+	if (idx == TYPE_COINS){
+		return;
 	}
 
-	/* include the last coin / do not include the last coin */
-	return solve_naive(last_entry, amount - coin[last_entry]) + solve_naive(last_entry - 1, amount);
+	/* include coin[idx] */
+	stack[sp++] = coin[idx];
+	solve_naive(idx, amount - coin[idx]);
+	sp--;
+
+	/* do not include coin[idx] */
+	solve_naive(idx + 1, amount);
+
+	return;
 }
 
 
@@ -84,10 +112,10 @@ N = 4 and S = {1,2,3} : {1,1,1,1},{1,1,2},{2,2},{1,3}
 N = 10 and S = {2,3,5,6} : {2,2,2,2,2}, {2,2,3,3}, {2,2,6}, {2,3,5}, {5,5}
 */
 void dp_coinchange(void){
-	int r;
-	//r = solve_naive(TYPE_COINS-1, AMOUNT);
-	r = solve_dp();
-	printf("possible cases are : %d (%d)\n", r, callcount);
+	count = 0; sp = 0;
+	solve_naive(0, AMOUNT);
+	//count = solve_dp();
+	printf("possible cases are : %d (%d)\n", count, callcount);
 	br = 1;
 	return;
 }

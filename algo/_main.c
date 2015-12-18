@@ -16,6 +16,7 @@ extern void dp_unique_paths(void);
 extern void bfs_matrics_road(void);
 extern void dp_lcs(void);
 extern void dp_cutting_a_rod(void);
+extern void dp_coinchange(void);
 
 extern void graph_dijkstra(void);
 extern void graph_mst_kruskal(void);
@@ -37,8 +38,8 @@ int main(void){
 	//dp_fibo();
 	//dp_lis();
 	//dp_edit_distance();
-	//dp_coinchange();
-	dp_cutting_a_rod();
+	dp_coinchange();
+	//dp_cutting_a_rod();
 
 	//graph_dijkstra();
 
