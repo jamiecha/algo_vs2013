@@ -18,9 +18,9 @@ static int coin[TYPE_COINS] = {1,2,3};
 #define AMOUNT 10
 static int coin[TYPE_COINS] = { 2, 3, 5, 6 };
 #elif case==3
-#define TYPE_COINS 6
+#define TYPE_COINS 4
 #define AMOUNT 100
-static int coin[TYPE_COINS] = { 1, 2, 5, 10, 20, 50 };
+static int coin[TYPE_COINS] = { 5, 10, 20, 50 };
 #else
 #error "no matching case"
 #endif

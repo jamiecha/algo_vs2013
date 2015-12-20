@@ -93,6 +93,9 @@
     <ClCompile Include="dp.cuttingarod.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dp.divnum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile">
