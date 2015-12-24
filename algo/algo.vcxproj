@@ -90,6 +90,7 @@
     <ClCompile Include="dp.uniquepaths.c" />
     <ClCompile Include="dp.mincostpath.c" />
     <ClCompile Include="dp.divnum.c" />
+    <ClCompile Include="etc.greycode.c" />
     <ClCompile Include="graph.bfs.dfs.c" />
     <ClCompile Include="graph.dijkstra.c" />
     <ClCompile Include="graph.mst.kruskal.c" />

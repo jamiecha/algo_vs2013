@@ -24,7 +24,7 @@ extern void graph_mst_kruskal(void);
 extern void sort_bubble(void);
 extern void temp(void);
 
-
+extern void etc_greycode(void);
 
 int main(void){
 
@@ -41,7 +41,7 @@ int main(void){
 	//dp_coinchange();
 	//dp_cutting_a_rod();
 
-	dp_divnum();
+	//dp_divnum();
 
 	//graph_dijkstra();
 
@@ -50,5 +50,6 @@ int main(void){
 	//dp_lcs();
 	//backtrack_permu();
 
+	etc_greycode();
 	return 0;
 }
