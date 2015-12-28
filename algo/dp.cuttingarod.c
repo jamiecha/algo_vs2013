@@ -23,7 +23,21 @@ static int max(int a, int b){ if (a > b)return a; else return b; }
 
 
 static void cut_dp(void){
-	//TODO
+	int len, cut, max_value;
+	int mv[L+1]; // dp table
+
+	mv[0] = 0;
+
+	for(len=1;len<=L;len++){
+		// find the maximum price sum for this length
+		max_value = -1;
+		for(cut=1;cut<=len;cut++){
+			max_value = max( max_value, P[cut] + mv[len-cut] );
+		}
+		mv[len] = max_value;
+	}
+	pmax = mv[L];
+	return;
 }
 
 
@@ -53,7 +67,10 @@ void dp_cutting_a_rod(void){
 	pmax = 0;
 	sp = 0;
 	cut_naive(L, 0);
-	printf("max price sum : %d\n", pmax);
+	printf("max price sum (naive) : %d\n", pmax);
+	pmax = 0;
+	cut_dp();
+	printf("max price sum (dp) : %d\n", pmax);
 	br = 1;
 	return;
 }

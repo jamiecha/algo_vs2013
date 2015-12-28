@@ -39,7 +39,7 @@ int main(void){
 	//dp_lis();
 	//dp_edit_distance();
 	//dp_coinchange();
-	//dp_cutting_a_rod();
+	dp_cutting_a_rod();
 
 	//dp_divnum();
 
@@ -50,6 +50,6 @@ int main(void){
 	//dp_lcs();
 	//backtrack_permu();
 
-	etc_greycode();
+	//etc_greycode();
 	return 0;
 }
