@@ -87,6 +87,7 @@
     <ClCompile Include="dp.fibo.c" />
     <ClCompile Include="dp.lcs.c" />
     <ClCompile Include="dp.lis.c" />
+    <ClCompile Include="dp.max-return.c" />
     <ClCompile Include="dp.uniquepaths.c" />
     <ClCompile Include="dp.mincostpath.c" />
     <ClCompile Include="dp.divnum.c" />

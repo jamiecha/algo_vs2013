@@ -18,6 +18,8 @@ extern void dp_lcs(void);
 extern void dp_cutting_a_rod(void);
 extern void dp_coinchange(void);
 extern void dp_divnum(void);
+extern void dp_max_return(void);
+
 extern void graph_dijkstra(void);
 extern void graph_mst_kruskal(void);
 
@@ -39,7 +41,8 @@ int main(void){
 	//dp_lis();
 	//dp_edit_distance();
 	//dp_coinchange();
-	dp_cutting_a_rod();
+	//dp_cutting_a_rod();
+	dp_max_return();
 
 	//dp_divnum();
 
