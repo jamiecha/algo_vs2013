@@ -102,6 +102,12 @@
     <ClCompile Include="dp.max-return.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dp.max-consecutive-sum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dp.number-pyramid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile">

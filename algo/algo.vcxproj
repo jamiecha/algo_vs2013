@@ -81,12 +81,14 @@
     <ClCompile Include="backtrack.nqueen.c" />
     <ClCompile Include="backtrack.permu.c" />
     <ClCompile Include="backtrack.subsetsum.c" />
+    <ClCompile Include="dp.number-pyramid.c" />
     <ClCompile Include="dp.coinchange.c" />
     <ClCompile Include="dp.cuttingarod.c" />
     <ClCompile Include="dp.editdistance.c" />
     <ClCompile Include="dp.fibo.c" />
     <ClCompile Include="dp.lcs.c" />
     <ClCompile Include="dp.lis.c" />
+    <ClCompile Include="dp.max-consecutive-sum.c" />
     <ClCompile Include="dp.max-return.c" />
     <ClCompile Include="dp.uniquepaths.c" />
     <ClCompile Include="dp.mincostpath.c" />
