@@ -40,13 +40,13 @@ int main(void){
 	//knapsack_naive();
 	//knapsack_dp();
 	//dp_fibo();
-	//dp_lis();
+	dp_lis();
 	//dp_edit_distance();
 	//dp_coinchange();
 	//dp_cutting_a_rod();
 	//dp_max_return();
 	//dp_max_consecutive_sum();
-	dp_number_pyramid();
+	//dp_number_pyramid();
 
 	//dp_divnum();
 
