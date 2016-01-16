@@ -1,5 +1,7 @@
-/* find cases of shortest paths in 5x6 matrics (1,1) to (5,4)
+/* 
 http://articles.leetcode.com/2010/11/unique-paths.html
+find cases of shortest paths in 5x6 matrics (1,1) to (5,4)
+출발점 ~ 도착점까지 도달하는데 unique 한 경로의 갯수
 */
 
 #include <stdio.h>

@@ -1,5 +1,7 @@
 /*
 http://www.geeksforgeeks.org/dynamic-programming-subset-sum-problem/
+백트래킹 연습
+배열 a[] 의 원소들을 조합하여 총 합이 N 이 되는 부분집합의 갯수를 구해라
 */
 
 #include <stdio.h>
@@ -9,10 +11,8 @@ static int br;
 #define N 25
 static int a[N] =
 {
-	10, 7, 5, 18, 12,
-	20, 15, 10, 7, 5,
-	18, 12, 20, 15, 10,
-	7, 5, 18, 12, 20,
+	10, 7, 5, 18, 12, 20, 15, 10, 7, 5, 
+	18, 12, 20, 15, 10, 7, 5, 18, 12, 20, 
 	36, 37, 38, 40, 41
 };
 

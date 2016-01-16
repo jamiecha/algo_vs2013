@@ -1,5 +1,10 @@
 /*
+
 http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/
+
+잔돈 100원을 거슬러줄 때 5원 10원 20원 50원 동전의 조합은?
+naive : 포함하는 경우와 포함하지 않는 경우
+dp : dp table 을 어떻게 구성할 지 먼저 고민해 보자.
 */
 #include <stdio.h>
 #include <string.h>

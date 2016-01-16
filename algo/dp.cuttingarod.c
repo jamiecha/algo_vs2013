@@ -6,6 +6,9 @@ length   | 1   2   3   4   5   6   7   8
 price    | 1   5   8   9  10  17  17  20
 
 max price = price of 2 + price of 6 = 22
+
+길이 L 인 막대를 잘라서 생기는 조각의 길이별 가격이 다를 경우 가격의 합이 최대가 되게 자르는 방법
+
 */
 
 #include <stdio.h>

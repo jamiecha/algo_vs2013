@@ -1,3 +1,6 @@
+/*
+수 분할 문제
+*/
 #include <stdio.h>
 static int br;
 

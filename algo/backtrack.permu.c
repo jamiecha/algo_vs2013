@@ -48,7 +48,7 @@ void backtrack_permu(void){
 		used[i] = 0;
 	sp = 0; callcount = 0;
 	permu(str, L);
-	printf("callcount=%d\n",callcount);
+	printf("callcount=%d\n", callcount);
 	br = 1;
 	return;
 }

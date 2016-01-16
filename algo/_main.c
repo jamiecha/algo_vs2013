@@ -36,11 +36,12 @@ int main(void){
 	//backtrack_basic();
 	//backtrack_subsetsum();
 	//backtrack_nqueen();
+	backtrack_permu();
 
 	//knapsack_naive();
 	//knapsack_dp();
 	//dp_fibo();
-	dp_lis();
+	//dp_lis();
 	//dp_edit_distance();
 	//dp_coinchange();
 	//dp_cutting_a_rod();
