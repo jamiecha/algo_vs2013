@@ -13,6 +13,12 @@ static int br;
 static int array[N];
 static int cache[N];
 
+static int max(int a, int b){
+	if(a>b)
+		return a;
+	else
+		return b;
+}
 
 static void generate_int(int n){
 	int i;
